@@ -3,4 +3,4 @@ init:
 
 report:
 	mkdir -p "reports"
-	python main.py
+	python -c "from app.ozon_analytics_data import main; main()"
