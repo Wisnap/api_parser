@@ -1,6 +1,6 @@
 import json
 
-from app.resource import BaseResource
+from api.resource import BaseResource
 from lib.enums.report import OzonAnalyticsReport
 from lib.enums.urls import ApiBaseUrls, OzonApiRoutes
 
