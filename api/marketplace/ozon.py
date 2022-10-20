@@ -28,6 +28,8 @@ class OzonApiManager(BaseResource):
             "date_to"
         )
         metrics = kwargs.get("metrics", [])
+        # У эндпойна ограничение на 14 метрик,
+        # В отчете нам нужно больше, поэтому пришлось сделать костыль из двух запросов
         f = ()
         if len(metrics) > OzonAnalyticsReport.METRICS_COUNT_MAX_VALUE:
             f = lambda m, n=OzonAnalyticsReport.METRICS_COUNT_MAX_VALUE: [m[i:i + n] for i in range(0, len(m), n)]
