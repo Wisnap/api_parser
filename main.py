@@ -20,7 +20,7 @@ def main():
     if not is_date_valid(date_to):
         raise Exception(f'Дата окончания {date_to} не валидна или не соответствует формату YYYY-MM-DD')
     limit = int(input('Введите кол-во записей (MAX=1000) \n'
-                      'Если значение не введено то по умолчанию выведется 5 записей\n') or 5)
+                      'Если значение не введено то по умолчанию выведется 1000 записей\n') or 1000)
     if limit == 0 or limit > 1000:
         raise Exception('Количество записей некорректное')
     ozon_client = OzonApiManager(
